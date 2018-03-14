@@ -30,7 +30,7 @@ body {
   box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
   border: none;
   resize: none;
-  background-color: #990033;
+  background-color: #000099;
   display: none;
   
 }
@@ -43,7 +43,7 @@ body {
   z-index:100;
 }
 #GeoJSon-toggle {
-  background-color: #000099;
+  background-color: #990033;
   position: absolute;
   top:10px;
   right:200px;
