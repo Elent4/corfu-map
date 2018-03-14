@@ -12,7 +12,7 @@ function init() {
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
-    mapTypeId: 'satellite'
+    mapTypeId: 'hybrid'
   });
 	
   map.data.setControls(['Point', 'LineString', 'Polygon']);
@@ -50,4 +50,16 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('addfeature', refreshGeoJsonFromData);
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
+}
+
+function ToggleGeoJsonOutput(){
+  var output = document.getElementById("geojson-output");
+  if (output.style.display === "block"){
+    output.style.display = "none";
+  } else {
+    output.style.display = "block";
+  }
+}
+
+function deletepaths(){
 }
