@@ -50,7 +50,7 @@ body {
   z-index:100;
 }
 #deleteallpaths {
-  background-color: #0000cc;
+  background-color: #none;
   position: absolute;
   bottom: 25px;
   right: 40px;
