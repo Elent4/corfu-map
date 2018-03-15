@@ -64,4 +64,6 @@ function ToggleGeoJsonOutput(){
 }
 
 function deletepaths(){
+map.data.forEach(function(e){map.data.remove(e);});
+  geoJsonOutput.value=null;
 }
