@@ -15,6 +15,8 @@ function init() {
     mapTypeId: 'hybrid'
   });
 	
+	map.data.loadGeoJson('data/dromoelenisolari.json');
+	
   map.data.setControls(['Point', 'LineString', 'Polygon']);
   map.data.setStyle({
     editable: true,
