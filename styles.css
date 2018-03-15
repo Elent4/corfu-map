@@ -30,7 +30,8 @@ body {
   box-sizing: border-box; /* Chrome, IE8, Opera, Safari 5.1*/
   border: none;
   resize: none;
-  background-color: #e6e6e6;
+  color: #009688;
+  background: #ffffff;
   display: none;
   
 }
