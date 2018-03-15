@@ -7,13 +7,15 @@ var downloadLink;
 function init() {
   // Initialise the map.
   map = new google.maps.Map(document.getElementById('map-holder'), {
-    center: {lat: 0, lng: 0},
-    zoom: 3,
+    center: {lat: 39.6249838, lng: 19.922346100000027},
+    zoom: 16,
     mapTypeControl: false,
     streetViewControl: false,
     fullscreenControl: false,
-    mapTypeId: 'satellite'
+    mapTypeId: 'hybrid'
   });
+	
+	map.data.loadGeoJson('data/2016106.geojson');
 	
   map.data.setControls(['Point', 'LineString', 'Polygon']);
   map.data.setStyle({
@@ -50,4 +52,18 @@ function bindDataLayerListeners(dataLayer) {
   dataLayer.addListener('addfeature', refreshGeoJsonFromData);
   dataLayer.addListener('removefeature', refreshGeoJsonFromData);
   dataLayer.addListener('setgeometry', refreshGeoJsonFromData);
+}
+
+function ToggleGeoJsonOutput(){
+  var output = document.getElementById("geojson-output");
+  if (output.style.display === "block"){
+    output.style.display = "none";
+  } else {
+    output.style.display = "block";
+  }
+}
+
+function deletepaths(){
+map.data.forEach(function(e){map.data.remove(e);});
+  geoJsonOutput.value=null;
 }

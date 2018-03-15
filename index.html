@@ -9,8 +9,11 @@
     <script src="editor.js"></script>
   </head>
   <body>
-    <textarea id="geojson-output" placeholder="See edits in GeoJson."></textarea>
-	<div id="map-holder"></div>
-	<a id="download-link" href="data:;base64," download="geojson.json"><button>Download GeoJson</button></a>
+    <div id="map-holder"></div>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <textarea class="style-textarea" id="geojson-output" placeholder="See edits in GeoJson."></textarea>
+    <button class="ghost-button" onclick="ToggleGeoJsonOutput()()" id="GeoJSon-toggle" >GeoJson String</button>
+    <button class="ghost-button" onclick="deletepaths()" id="deleteallpaths" >Delete All</button>
+    <a  href="data:;base64," download="geojson.json"><button id="download-link" class="ghost-button" >Download GeoJson</button></a>
   </body>
 </html>
